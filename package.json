@@ -1,0 +1,30 @@
+{
+  "name": "project-005",
+  "version": "1.0.0",
+  "description": "project-005",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tamasnvk",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.7",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-helmet": "^6.1.0",
+    "@types/styled-components": "^5.1.4",
+    "babel-plugin-styled-components": "^1.11.1",
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-react-helmet": "^3.4.0",
+    "gatsby-plugin-styled-components": "^3.4.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.5",
+    "typescript": "^4.0.5"
+  }
+}
