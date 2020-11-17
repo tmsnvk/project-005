@@ -1,15 +1,18 @@
 import React, { FunctionComponent } from "react";
-import styled from "styled-components";
+import { MainLayout } from "../components/layout";
+import { About, Contact, Footer, Header, Navigation, Portfolio } from "../components/main";
 
-const Heading = styled.h1`
-  font-size: 15px;
-  color: red;
-`;
-
-const Home: FunctionComponent = () => {
+const Index: FunctionComponent = () => {
   return (
-    <Heading>Hello Gatsby!</Heading>
+    <MainLayout>
+      <Navigation />
+      <Header />
+      <About id="about" />
+      <Portfolio id="portfolio" />
+      <Contact id="contact" />
+      <Footer />
+    </MainLayout>
   );
 };
 
-export default Home;
+export default Index;
