@@ -1,37 +1,41 @@
 import React, { FunctionComponent } from "react";
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from "styled-components";
-import Title from "../common/header/Title";
+import { SubTitle, Title } from "components/common/header";
 
 const ComponentContainer = styled.header`
   grid-row-start: 2;
   grid-row-end: 3;
+  width: 90%;
+  margin: 10rem 0 0 0;
 `;
 
-type ComponentType = {
-  data : {
-    title: string
-    subtitle: string
+type DataType = {
+  dataJson: {
+    header: {
+      title: string
+      subtitle: string
+    }
   }
 }
 
-const Header: FunctionComponent<ComponentType> = () => {
-  return (
-    <StaticQuery
-      query={graphql`
-        {
-          dataheaderJson {
-            subtitle
-            title
-          }
+const Header: FunctionComponent = () => {
+  const data = useStaticQuery<DataType>(graphql`
+    {
+      dataJson {
+        header {
+          subtitle
+          title
         }
-      `}
-      render={data => (
-        <ComponentContainer>
-          <Title data={data} />
-        </ComponentContainer>
-      )}
-    />
+      }
+    }
+  `);
+
+  return (
+    <ComponentContainer>
+      <Title data={data.dataJson.header.title} />
+      <SubTitle data={data.dataJson.header.subtitle} />
+    </ComponentContainer>
   );
 };
 

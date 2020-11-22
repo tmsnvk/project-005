@@ -1,0 +1,17 @@
+{
+  "header": {
+    "title": "Hi, I'm Tamas.",
+    "subtitle": "I'm a self-taught developer who is looking for his first full-time webdev position.",
+    "description": [
+      {
+        "paragraph": "Text"
+      },
+      {
+        "paragraph": "Text"
+      },
+      {
+        "paragraph": "Text"
+      }
+    ]
+  }
+}

@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
 
 const LayoutContainer = styled.main`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   column-gap: 2em;
   row-gap: 2rem;

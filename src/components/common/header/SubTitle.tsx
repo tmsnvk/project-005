@@ -9,7 +9,7 @@ type ComponentType = {
   data: string
 }
 
-const Title: FunctionComponent<ComponentType> = ({ data }) => {  
+const SubTitle: FunctionComponent<ComponentType> = ({ data }) => {  
   return (
     <ComponentContainer>
       <h1>{data}</h1>
@@ -17,4 +17,4 @@ const Title: FunctionComponent<ComponentType> = ({ data }) => {
   );
 };
 
-export default Title;
+export default SubTitle;
