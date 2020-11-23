@@ -8,7 +8,7 @@ const theme: DefaultTheme = {
     alternate: "#ff9900", // orange
   },
   fontFamily: {
-    main: `"Roboto", sans-serif`
+    main: `"Roboto Mono", sans-serif`
   },
   fontSize: {
     default: "1rem",

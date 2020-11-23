@@ -1,5 +1,5 @@
 {
-  "include": ["./src/**/*", "utilities"],
+  "include": ["./src/**/*", "src/utilities"],
   "compilerOptions": {
     "baseUrl": "./src",
     "target": "esnext",

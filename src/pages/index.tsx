@@ -1,8 +1,8 @@
-import React, { FunctionComponent } from "react";
-import { MainLayout } from "../components/layout";
-import { About, Contact, Footer, Header, Navigation, Portfolio } from "../components/main";
+import React from "react";
+import { MainLayout } from "components/layout";
+import { About, Contact, Footer, Header, Navigation, Portfolio } from "components/main";
 
-const Index: FunctionComponent = () => {
+const Index = () => {
   return (
     <MainLayout>
       <Navigation />
