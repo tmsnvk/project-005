@@ -2,22 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const ComponentContainer = styled.div`
-`;
-
-const Title = styled.div`
-  font-size: ${({ theme }) => theme.fontSize.large};
-  font-weight: 600;
-  text-align: center;
-
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.large}) {
-    font-size: ${({ theme }) => theme.fontSize.xxLarge};
-    text-align: left;
-    margin: 0 0 0 10rem;
+    width: 60%;
+    margin: 2rem auto 0;
   }
 `;
 
 const DescriptionContainer = styled.div`
-
+  margin: 2rem 0 0 0;
 `;
 
 const DescriptionParagraph = styled.div`
@@ -53,7 +45,6 @@ const TechListItem = styled.li`
 
 type TComponent = {
   data: {
-    title: string;
     description: Array<TDescription>;
     techlist: Array<TTechList>;
   };
@@ -88,14 +79,11 @@ const Description = ({ data }: TComponent) => {
 
   return (
     <ComponentContainer>
-      <Title>
-        {data.title}
-      </Title>
       <DescriptionContainer>
-      {renderDescription}
+        {renderDescription}
       </DescriptionContainer>
       <TechListContainer>
-      {renderTechList}
+        {renderTechList}
       </TechListContainer>
     </ComponentContainer>
   );

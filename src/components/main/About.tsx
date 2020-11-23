@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 import { Description } from "components/common/about";
+import { Title } from "components/shared";
 
 const ComponentContainer = styled.section`
   grid-column-start: 1;
@@ -13,7 +14,6 @@ const ComponentContainer = styled.section`
 
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
     grid-column-end: 3;
-    width: 60%;
   }
 `;
 
@@ -21,48 +21,20 @@ type TComponent = {
   id: string;
 }
 
-type TQuery = {
-  dataJson: {
-    header: {
-      subtitle: string;
-      title: string;
-      about: {
-        description: Array<TDescription>;
-        title: string;
-        techlist: Array<TTechList>;
-      };
-    };
-  };
-}
-
-type TDescription = {
-  id: number;
-  paragraph: string;
-}
-
-type TTechList = {
-  id: number;
-  name: string;
-}
-
 const About = ({ id }: TComponent) => {
-  const data = useStaticQuery<TQuery>(graphql`
+  const data = useStaticQuery(graphql`
     {
       dataJson {
-        header {
-          subtitle
-          title
-          about {
-            description {
-              id
-              paragraph
-            }
-            title
-            techlist {
-              id
-              name
-            }
+        about {
+          description {
+            id
+            paragraph
           }
+          techlist {
+            id
+            name
+          }
+          title
         }
       }
     }
@@ -70,7 +42,8 @@ const About = ({ id }: TComponent) => {
 
   return (
     <ComponentContainer id={id}>
-      <Description data={data.dataJson.header.about} />
+      <Title data={data.dataJson.about.title} />
+      <Description data={data.dataJson.about} />
     </ComponentContainer>
   );
 };

@@ -1,7 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
-import { SubTitle, Title } from "components/common/header";
+import { SubTitle } from "components/common/header";
+import { Title } from "components/shared";
 
 const ComponentContainer = styled.header`
   grid-column-start: 1;
@@ -13,14 +14,13 @@ const ComponentContainer = styled.header`
 
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
     grid-column-end: 3;
-    width: 60%;
   }
 `;
 
 type TQuery = {
   dataJson: {
     header: {
-      subtitle: string;
+      introtext: string;
       title: string;
     };
   };
@@ -31,7 +31,7 @@ const Header = () => {
     {
       dataJson {
         header {
-          subtitle
+          introtext
           title
         }
       }
@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <ComponentContainer>
       <Title data={data.dataJson.header.title} />
-      <SubTitle data={data.dataJson.header.subtitle} />
+      <SubTitle data={data.dataJson.header.introtext} />
     </ComponentContainer>
   );
 };

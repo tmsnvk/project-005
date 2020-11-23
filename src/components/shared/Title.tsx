@@ -9,7 +9,8 @@ const ComponentContainer = styled.div`
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.large}) {
     font-size: ${({ theme }) => theme.fontSize.xxLarge};
     text-align: left;
-    margin: 0 0 0 10rem;
+    width: 40%;
+    margin: 0 auto;
   }
 `;
 

@@ -1,53 +1,86 @@
 {
   "header": {
     "title": "Hi, I am Tamas.",
-    "subtitle": "I am a self-taught developer who is looking for his first full-time front-end position.",
-    "about": {
-      "title": "About me",
-      "description": [
-        {
-          "id": 1,
-          "paragraph": "My undergrad programme revolved around HTML, CSS and JS back in the late 2000s, and while I continued my grad programme with a social/political science angle and later worked as a teacher, my interest in web development never wavered."
-        },
-        {
-          "id": 2,
-          "paragraph": "In 2019, I refreshed my HTML, CSS and JS knowledge and continued with learning React and its ecosystem. I completed the Udacity FrontEnd NanoDegree programme in early 2020."
-        },
-        {
-          "id": 3,
-          "paragraph": "I have spent this last year building projects small and big to expand my knowledge in various directions."
-        },
-        {
-          "id": 4,
-          "paragraph": "Here are some of the techs I have been working with:"
-        }
-      ],
-      "techlist": [
-        {
-          "id": 1,
-          "name": "HTML/CSS"
-        },
-        {
-          "id": 2,
-          "name": "Javascript/Typescript"
-        },
-        {
-          "id": 3,
-          "name": "React"
-        },
-        {
-          "id": 4,
-          "name": "Gatsby"
-        },
-        {
-          "id": 5,
-          "name": "Node.JS/Express"
-        },
-        {
-          "id": 6,
-          "name": "MongoDB"
-        }
-      ]
-    }
+    "introtext": "I am a self-taught web developer who is looking for his first full-time front-end position."
+  },
+  "about": {
+    "title": "About me",
+    "description": [
+      {
+        "id": 1,
+        "paragraph": "My undergrad programme partially revolved around HTML, CSS and JS back in the late 2000s, and while I continued my grad programme with a social/political science angle and later worked as a teacher in several different institutions, my interest in coding in general never wavered."
+      },
+      {
+        "id": 2,
+        "paragraph": "In 2019, I refreshed my HTML, CSS and JS knowledge and continued with learning React and its ecosystem. I completed Udacity's FrontEnd NanoDegree programme in early 2020."
+      },
+      {
+        "id": 3,
+        "paragraph": "I have spent this last year building projects small and big to expand my knowledge in various directions."
+      },
+      {
+        "id": 4,
+        "paragraph": "Some of the techs I have been working with:"
+      }
+    ],
+    "techlist": [
+      { "id": 1, "name": "HTML/CSS" },
+      { "id": 2, "name": "Javascript/Typescript" },
+      { "id": 3, "name": "React" },
+      { "id": 4, "name": "Gatsby" },
+      { "id": 5, "name": "Node.JS/Express" },
+      { "id": 6, "name": "MongoDB" }
+    ]
+  },
+  "projects": {
+    "title": "Portfolio",
+    "list": [
+      {
+        "id": 1,
+        "title": "Star Wars Keys",
+        "subtitle": "project-001",
+        "description": "One of the many smaller vanilla HTML/CSS/JS projects I have created as practice.",
+        "githubLink": "https://github.com/tmsnvk/project-001",
+        "demolink": "https://tmsnvk.github.io/project-001/src/html/index.html",
+        "tags": ["html/css", "javascript"],
+        "image": "/images/project-001.png"
+      },
+      {
+        "id": 2,
+        "title": "News Index",
+        "description": "",
+        "githubLink": "",
+        "demolink": "",
+        "tags": ["html/css", "javascript"],
+        "image": "/images/project-001.png"
+      },
+      {
+        "id": 3,
+        "title": "Central Kanto Pokemon Database",
+        "description": "",
+        "githubLink": "",
+        "demolink": "",
+        "tags": ["html/css", "javascript"],
+        "image": "/images/project-001.png"
+      },
+      {
+        "id": 4,
+        "title": "Evrallas",
+        "description": "",
+        "githubLink": "",
+        "demolink": "",
+        "tags": ["html/css", "javascript"],
+        "image": "/images/project-001.png"
+      },
+      {
+        "id": 5,
+        "title": "Portfolio Site",
+        "description": "",
+        "githubLink": "",
+        "demolink": "",
+        "tags": ["html/css", "javascript"],
+        "image": "/images/project-001.png"
+      }
+    ]
   }
 }
