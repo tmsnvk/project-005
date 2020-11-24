@@ -27,7 +27,7 @@ const Portfolio = ({ id }: TComponent) => {
       dataJson {
         projects {
           list {
-            demolink
+            demoLink
             description
             githubLink
             id

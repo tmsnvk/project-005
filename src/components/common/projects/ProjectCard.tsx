@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { StyledIcon } from "components/shared";
+import iconList from "utilities/iconList";
 
 const ComponentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
+  @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.large}) {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -14,14 +16,15 @@ const ComponentContainer = styled.div`
 
 const CardContainer = styled.div`
   box-shadow: 0px 2px 5px 0px ${({ theme }) => theme.color.primaryDark};
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 3rem 2rem 0 2rem;
+  border-radius: 0.5rem;
 
   &:hover {
     transform: scale(1.05);
     transition: transform 0.2s;
   }
 
-  @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
+  @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.large}) {
     max-width: 45%;
   }
 `;
@@ -46,11 +49,12 @@ const TitleContainer = styled.div`
 const Title = styled.div`
   font-size: ${({ theme }) => theme.fontSize.large};
   font-weight: 600;
-  padding: 0 0 0 2.5rem;
+  padding: 1rem 0 0 2.5rem;
 `;
 
 const SubTitle = styled.div`
-  font-size: ${({ theme }) => theme.fontSize.small};
+  font-size: ${({ theme }) => theme.fontSize.default};
+  font-weight: 600;
   padding: 0 0 0 2.5rem;
 `;
 
@@ -71,19 +75,44 @@ const Tags = styled.div`
 `;
 
 const Description = styled.div`
-  font-size: ${({ theme }) => theme.fontSize.default};
-  padding: 1rem 2.5rem 0 2.5rem;
+  font-size: ${({ theme }) => theme.fontSize.small};
+  padding: 1rem 2.5rem 1rem 2.5rem;
 `;
 
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const ProjectLink = styled.a`
+  font-size: ${({ theme }) => theme.fontSize.small};
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 0.2rem solid ${({ theme }) => theme.color.secondary};
+  margin: 1rem 0 2rem 2.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+
+
+  &:hover {
+    color: ${({ theme }) => theme.color.primaryLight};
+    background-color: ${({ theme }) => theme.color.secondary};
+  }
+
+  &:hover ${StyledIcon} {
+    color: ${({ theme }) => theme.color.primaryLight};
+  }
+`;
 
 type TComponent = {
   data: Array<TList>;
 }
 
 type TList = {
-  demolink: string;
+  demoLink: string;
   description: string;
-  githublink: string;
+  githubLink: string;
   id: number;
   title: string;
   subtitle: string;
@@ -95,9 +124,7 @@ const ProjectCard = ({ data }: TComponent) => {
   const renderProjectCard = data.map((element) => {
     return (
       <CardContainer key={element.id}>
-        <ImageContainer>
-          <Image src={element.image} />
-        </ImageContainer>
+        {element.image !== "" ? <ImageContainer><Image src={element.image} /></ImageContainer> : null}
         <TitleContainer>
           <Title>
             {element.title}
@@ -115,6 +142,10 @@ const ProjectCard = ({ data }: TComponent) => {
           <Description>
             {element.description}
           </Description>
+        <LinkContainer>
+          <ProjectLink href={element.githubLink}><StyledIcon icon={iconList.github}></StyledIcon>Github</ProjectLink>
+          {element.demoLink !== "" ? <ProjectLink href={element.demoLink}><StyledIcon icon={iconList.live}></StyledIcon>View Live</ProjectLink> : null}
+        </LinkContainer>
       </CardContainer>
     );
   });

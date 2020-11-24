@@ -39,47 +39,51 @@
         "id": 1,
         "title": "Star Wars Keys",
         "subtitle": "project-001",
-        "description": "One of the many smaller vanilla HTML/CSS/JS projects I have created as practice.",
+        "description": "One of the many smaller vanilla HTML/CSS/JS projects I have built as practice.",
         "githubLink": "https://github.com/tmsnvk/project-001",
-        "demolink": "https://tmsnvk.github.io/project-001/src/html/index.html",
+        "demoLink": "https://tmsnvk.github.io/project-001/src/html/index.html",
         "tags": ["html/css", "javascript"],
         "image": "/images/project-001.png"
       },
       {
         "id": 2,
         "title": "News Index",
-        "description": "",
-        "githubLink": "",
-        "demolink": "",
-        "tags": ["html/css", "javascript"],
-        "image": "/images/project-001.png"
+        "subtitle": "project-002a",
+        "description": "A React front / Express back application that fetches and displays news items from a third-party API based on various country/category selection.",
+        "githubLink": "https://github.com/tmsnvk/project-002a",
+        "demoLink": "https://newsindex.herokuapp.com/",
+        "tags": ["react", "node.js/express", "typescript"],
+        "image": "/images/project-002.png"
       },
       {
         "id": 3,
         "title": "Central Kanto Pokemon Database",
-        "description": "",
-        "githubLink": "",
-        "demolink": "",
-        "tags": ["html/css", "javascript"],
-        "image": "/images/project-001.png"
+        "subtitle": "project-003",
+        "description": "A pokemon themed application that imitates a subscription-based service site with form submit pages and a search functionality serving a public API database.",
+        "githubLink": "https://github.com/tmsnvk/central_kanto_pokemon_database",
+        "demoLink": "https://ckpd.herokuapp.com/",
+        "tags": ["react", "node.js/express", "mongodb"],
+        "image": "/images/project-003.png"
       },
       {
         "id": 4,
         "title": "Evrallas",
-        "description": "",
-        "githubLink": "",
-        "demolink": "",
-        "tags": ["html/css", "javascript"],
-        "image": "/images/project-001.png"
+        "subtitle": "project-004",
+        "description": "Evralles is a choose-your-own-adventure story game. The application includes multiple adventures to choose from, user statistics and achievement tracking, different colour themes and more.",
+        "githubLink": "https://github.com/tmsnvk/evrallas",
+        "demoLink": "https://evrallas.herokuapp.com/",
+        "tags": ["react", "node.js/express", "mongodb"],
+        "image": "/images/project-004.png"
       },
       {
         "id": 5,
         "title": "Portfolio Site",
-        "description": "",
-        "githubLink": "",
-        "demolink": "",
-        "tags": ["html/css", "javascript"],
-        "image": "/images/project-001.png"
+        "subtitle": "project-005",
+        "description": "A simple static portfolio site to showcase some of my projects.",
+        "githubLink": "https://github.com/tmsnvk/project-005",
+        "demoLink": "",
+        "tags": ["gatsby", "typescript"],
+        "image": ""
       }
     ]
   }

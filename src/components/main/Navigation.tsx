@@ -16,6 +16,7 @@ const ComponentContainer = styled.nav`
   background-color: ${({ theme }) => theme.color.primaryLight};
   box-shadow: 0px 2px 5px 0px ${({ theme }) => theme.color.primaryDark};
   padding: 2rem 0 2rem 0;
+  z-index: 100;
 
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
     grid-column-end: 3;
