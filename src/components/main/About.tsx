@@ -1,38 +1,43 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
+import { TDescription, TTechList } from "utilities/sharedTypes/sharedTypes";
 import { Description } from "components/common/about";
 import { Title } from "components/shared";
 
-const ComponentContainer = styled.section`
+const SectionContainer = styled.section`
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
   width: 90%;
-  margin: 5rem auto 0;
+  margin: 0 auto 0;
 
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
     grid-column-end: 3;
   }
 `;
 
-type TComponent = {
-  id: string;
+type TQuery = {
+  dataJson: {
+    about: {
+      description: Array<TDescription>;
+      techlist: Array<TTechList>;
+      title: string;
+    };
+  };
 }
 
-const About = ({ id }: TComponent) => {
-  const data = useStaticQuery(graphql`
+const About = () => {
+  const data = useStaticQuery<TQuery>(graphql`
     {
       dataJson {
         about {
           description {
-            id
-            paragraph
+            id, paragraph
           }
           techlist {
-            id
-            name
+            id, name
           }
           title
         }
@@ -41,10 +46,10 @@ const About = ({ id }: TComponent) => {
   `);
 
   return (
-    <ComponentContainer id={id}>
+    <SectionContainer>
       <Title data={data.dataJson.about.title} />
       <Description data={data.dataJson.about} />
-    </ComponentContainer>
+    </SectionContainer>
   );
 };
 

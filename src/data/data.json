@@ -1,18 +1,18 @@
 {
   "header": {
     "title": "Hi, I am Tamas.",
-    "introtext": "I am a self-taught web developer who is looking for his first full-time front-end position."
+    "statement": "I am a self-taught web developer who is looking for his first full-time front-end position."
   },
   "about": {
     "title": "About me",
     "description": [
       {
         "id": 1,
-        "paragraph": "My undergrad programme partially revolved around HTML, CSS and JS back in the late 2000s, and while I continued my grad programme with a social/political science angle and later worked as a teacher in several different institutions, my interest in coding in general never wavered."
+        "paragraph": "A big part of my bachelor programme revolved around HTML, CSS and JS in the late 2000s, and while I continued my master programme with a social/political science angle and later worked as a teacher in several different institutions, my interest in coding in general never wavered."
       },
       {
         "id": 2,
-        "paragraph": "In 2019, I refreshed my HTML, CSS and JS knowledge and continued with learning React and its ecosystem. I completed Udacity's FrontEnd NanoDegree programme in early 2020."
+        "paragraph": "In 2019, I refreshed my HTML, CSS and JS knowledge and in early 2020 completed Udacity's FrontEnd NanoDegree Program. Then continued with learning React and its ecosystem."
       },
       {
         "id": 3,
@@ -39,7 +39,7 @@
         "id": 1,
         "title": "Star Wars Keys",
         "subtitle": "project-001",
-        "description": "One of the many smaller vanilla HTML/CSS/JS projects I have built as practice.",
+        "description": "One of the many small vanilla HTML/CSS/JS projects I have built as practice.",
         "githubLink": "https://github.com/tmsnvk/project-001",
         "demoLink": "https://tmsnvk.github.io/project-001/src/html/index.html",
         "tags": ["html/css", "javascript"],
@@ -49,17 +49,17 @@
         "id": 2,
         "title": "News Index",
         "subtitle": "project-002a",
-        "description": "A React front / Express back application that fetches and displays news items from a third-party API based on various country/category selection.",
+        "description": "A React/Express application that fetches and displays news items from a third-party API based on various country/category selection.",
         "githubLink": "https://github.com/tmsnvk/project-002a",
         "demoLink": "https://newsindex.herokuapp.com/",
-        "tags": ["react", "node.js/express", "typescript"],
-        "image": "/images/project-002.png"
+        "tags": ["typescript", "react", "node.js/express"],
+        "image": "/images/project-002a.png"
       },
       {
         "id": 3,
         "title": "Central Kanto Pokemon Database",
         "subtitle": "project-003",
-        "description": "A pokemon themed application that imitates a subscription-based service site with form submit pages and a search functionality serving a public API database.",
+        "description": "A pokemon themed React/Express application that imitates a subscription-based service site with pricing offers, form submit pages and a search functionality serving a public API database. Form submits are saved in a MongoDB database.",
         "githubLink": "https://github.com/tmsnvk/central_kanto_pokemon_database",
         "demoLink": "https://ckpd.herokuapp.com/",
         "tags": ["react", "node.js/express", "mongodb"],
@@ -69,7 +69,7 @@
         "id": 4,
         "title": "Evrallas",
         "subtitle": "project-004",
-        "description": "Evralles is a choose-your-own-adventure story game. The application includes multiple adventures to choose from, user statistics and achievement tracking, different colour themes and more.",
+        "description": "Evrallas is a choose-your-own-adventure story game. The application includes multiple adventures to choose from, account statistics and achievement tracking, resetting account progress, different colour themes and more.",
         "githubLink": "https://github.com/tmsnvk/evrallas",
         "demoLink": "https://evrallas.herokuapp.com/",
         "tags": ["react", "node.js/express", "mongodb"],
@@ -79,12 +79,16 @@
         "id": 5,
         "title": "Portfolio Site",
         "subtitle": "project-005",
-        "description": "A simple static portfolio site to showcase some of my projects.",
+        "description": "The site is a simple Gatsby generated static site to showcase some of my projects.",
         "githubLink": "https://github.com/tmsnvk/project-005",
         "demoLink": "",
-        "tags": ["gatsby", "typescript"],
+        "tags": ["typescript", "gatsby"],
         "image": ""
       }
     ]
+  },
+  "contact": {
+    "title": "Contact",
+    "statement": "Feel free to reach out via email or LinkedIn!"
   }
 }

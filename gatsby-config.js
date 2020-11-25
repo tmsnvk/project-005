@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    description: "project-005 || tamasnvk",
+    title: "Portfolio Page",
+    url: "https://www.tamasnovak.net"
+  },
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
@@ -7,7 +12,7 @@ module.exports = {
       resolve: "gatsby-plugin-google-fonts",
       options: {
         fonts: [
-          "roboto mono\:300,400,600,700" // you can also specify font weights and styles
+          "roboto mono\:400,600"
         ],
         display: "swap"
       }
@@ -21,9 +26,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-typescript",
       options: {
-        isTSX: true, // defaults to false
-        jsxPragma: "jsx", // defaults to "React"
-        allExtensions: true, // defaults to false
+        isTSX: true,
+        jsxPragma: "jsx",
+        allExtensions: true,
       },
     },
     {
@@ -35,6 +40,15 @@ module.exports = {
           utilities: "src/utilities"
         }
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: process.env.GA_KEY,
+        head: false,
+        anonymize: true,
+        respectDNT: true
+      },
+    },
   ],
 }

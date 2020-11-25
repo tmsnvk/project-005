@@ -1,4 +1,5 @@
+import Seo from "./Seo";
 import StyledIcon from "./StyledIcon";
 import Title from "./Title";
 
-export { StyledIcon, Title };
+export { Seo, StyledIcon, Title };

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { TComponent } from "utilities/sharedTypes/sharedTypes";
 
-const ComponentContainer = styled.div`
+const ComponentContainer = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.large};
   font-weight: 600;
   text-align: center;
@@ -13,10 +14,6 @@ const ComponentContainer = styled.div`
     margin: 0 auto;
   }
 `;
-
-type TComponent = {
-  data: string
-}
 
 const Title = ({ data }: TComponent) => {  
   return (

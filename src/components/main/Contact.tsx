@@ -1,20 +1,47 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
+import { ContactTab } from "components/common/contact";
+import { Title } from "components/shared";
 
-const ComponentContainer = styled.section`
-  grid-row-start: 5;
-  grid-row-end: 6;
+const SectionContainer = styled.section`
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  width: 90%;
+  margin: 0 auto 0;
+
+  @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
+    grid-column-end: 3;
+  }
 `;
 
-type ComponentType = {
-  id: string
+type TQuery = {
+  dataJson: {
+    contact: {
+      statement: string;
+      title: string;
+    };
+  };
 }
 
-const Contact: FunctionComponent<ComponentType> = ({ id }) => {
+const Contact = () => {
+  const data = useStaticQuery<TQuery>(graphql`
+    {
+      dataJson {
+        contact {
+          statement, title
+        }
+      }
+    }
+  `);
+
   return (
-    <ComponentContainer id={id}>
-      
-    </ComponentContainer>
+    <SectionContainer>
+      <Title data={data.dataJson.contact.title} />
+      <ContactTab data={data.dataJson.contact.statement} />
+    </SectionContainer>
   );
 };
 

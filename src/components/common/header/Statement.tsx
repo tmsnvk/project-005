@@ -1,24 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import { TComponent } from "utilities/sharedTypes/sharedTypes";
 
-const ComponentContainer = styled.div`
-  font-size: ${({ theme }) => theme.fontSize.medium};
+const ComponentContainer = styled.p`
+  font-size: ${({ theme }) => theme.fontSize.small};
   font-weight: 600;
   margin: 2rem 0 0 0;
 
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.large}) {
-    font-size: ${({ theme }) => theme.fontSize.large};
+    font-size: ${({ theme }) => theme.fontSize.medium};
     text-align: left;
     margin: 2rem auto 0;
     width: 60%;
   }
 `;
 
-type TComponent = {
-  data: string
-}
-
-const SubTitle = ({ data }: TComponent) => {  
+const Statement = ({ data }: TComponent) => {  
   return (
     <ComponentContainer>
       {data}
@@ -26,4 +23,4 @@ const SubTitle = ({ data }: TComponent) => {
   );
 };
 
-export default SubTitle;
+export default Statement;

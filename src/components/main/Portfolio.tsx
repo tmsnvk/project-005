@@ -1,40 +1,39 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
-import { ProjectCard } from "components/common/projects";
+import { ProjectCard } from "components/common/portfolio";
 import { Title } from "components/shared";
+import { TList } from "utilities/sharedTypes/sharedTypes";
 
-const ComponentContainer = styled.section`
+const SectionContainer = styled.section`
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 7;
   width: 90%;
-  margin: 5rem auto 0;
+  margin: 0 auto 0;
 
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
     grid-column-end: 3;
   }
 `;
 
-type TComponent = {
-  id: string;
+type TQuery = {
+  dataJson: {
+    projects: {
+      list: Array<TList>;
+      title: string;
+    };
+  };
 }
 
-const Portfolio = ({ id }: TComponent) => {
-  const data = useStaticQuery(graphql`
+const Portfolio = () => {
+  const data = useStaticQuery<TQuery>(graphql`
     {
       dataJson {
         projects {
           list {
-            demoLink
-            description
-            githubLink
-            id
-            image
-            title
-            subtitle
-            tags
+            demoLink, description, githubLink, id, image, title, subtitle, tags
           }
           title
         }
@@ -43,10 +42,10 @@ const Portfolio = ({ id }: TComponent) => {
   `);
 
   return (
-    <ComponentContainer id={id}>
+    <SectionContainer>
       <Title data={data.dataJson.projects.title} />
       <ProjectCard data={data.dataJson.projects.list} />
-    </ComponentContainer>
+    </SectionContainer>
   );
 };
 

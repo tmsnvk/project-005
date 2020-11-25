@@ -4,8 +4,7 @@ const theme: DefaultTheme = {
   color: {
     primaryDark: "#2d2d2d", // dark gray
     primaryLight: "#f3f3f3", // light gray
-    secondary: "#00af43", // green
-    alternate: "#ff9900", // orange
+    secondary: "#00af43" // green
   },
   fontFamily: {
     main: `"Roboto Mono", sans-serif`

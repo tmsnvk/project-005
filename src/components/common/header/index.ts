@@ -1,3 +1,3 @@
-import SubTitle from "./SubTitle";
+import Statement from "./Statement";
 
-export { SubTitle };
+export { Statement };

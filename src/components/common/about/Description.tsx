@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { TDescription, TTechList } from "utilities/sharedTypes/sharedTypes";
 
 const ComponentContainer = styled.div`
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.large}) {
@@ -12,7 +13,7 @@ const DescriptionContainer = styled.div`
   margin: 2rem 0 0 0;
 `;
 
-const DescriptionParagraph = styled.div`
+const DescriptionParagraph = styled.p`
   font-size: ${({ theme }) => theme.fontSize.small};
   padding: 1rem 0 1rem 0;
 
@@ -26,16 +27,16 @@ const DescriptionParagraph = styled.div`
 `;
 
 const TechListContainer = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, 12rem);
   font-size: ${({ theme }) => theme.fontSize.default};
   font-weight: 600;
   margin: 0 0 0 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 12rem);
 
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.large}) {
+    grid-template-columns: repeat(2, 20rem);
     font-size: ${({ theme }) => theme.fontSize.small};
     margin: 0 0 0 5rem;
-    grid-template-columns: repeat(2, 20rem);
   }
 `;
 
@@ -48,16 +49,6 @@ type TComponent = {
     description: Array<TDescription>;
     techlist: Array<TTechList>;
   };
-}
-
-type TDescription = {
-  id: number;
-  paragraph: string;
-}
-
-type TTechList = {
-  id: number;
-  name: string;
 }
 
 const Description = ({ data }: TComponent) => {
