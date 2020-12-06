@@ -1,7 +1,7 @@
-import React, { MouseEvent } from "react";
+import React from "react";
 import { Link } from "gatsby";
-import styled from "styled-components";
 import { trackCustomEvent } from "gatsby-plugin-google-analytics";
+import styled from "styled-components";
 
 const ComponentContainer = styled.nav`
   grid-column-start: 1;
@@ -54,17 +54,8 @@ const SectionLink = styled(Link)`
   }
 `;
 
-type TComponent = {
-  onClick?(): MouseEvent<JSX.Element>;
-}
-
-const Navigation = ({}: TComponent) => {
-  const trackClick = (): void => {
-    trackCustomEvent({
-      category: "navigation link", 
-      action: "click"
-    });
-  };
+const Navigation = () => {
+  const trackAnchorClick = (): void => trackCustomEvent({ category: "nav anchor", action: "nav click" });
 
   return (
     <ComponentContainer>
@@ -72,9 +63,9 @@ const Navigation = ({}: TComponent) => {
         <NameLink to="/">tamas novak</NameLink>
       </NameContainer>
       <SectionLinkContainer>
-        <SectionLink to="/#about" onClick={trackClick}>About</SectionLink>
-        <SectionLink to="/#portfolio" onClick={trackClick}>Portfolio</SectionLink>
-        <SectionLink to="/#contact" onClick={trackClick}>Contact</SectionLink>
+        <SectionLink to="/#about" onClick={trackAnchorClick}>About</SectionLink>
+        <SectionLink to="/#portfolio" onClick={trackAnchorClick}>Portfolio</SectionLink>
+        <SectionLink to="/#contact" onClick={trackAnchorClick}>Contact</SectionLink>
       </SectionLinkContainer>
     </ComponentContainer>
   );

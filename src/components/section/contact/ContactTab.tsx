@@ -1,4 +1,5 @@
 import React from "react";
+import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 import styled from "styled-components";
 import { StyledIcon } from "components/shared";
 import iconList from "utilities/iconList/iconList";
@@ -51,12 +52,19 @@ const ContactLink = styled.a`
 `;
 
 const ContactTab = ({ data }: TComponent) => {
+  const trackEmailClick = (): void => trackCustomEvent({ category: "contact/email",  action: "contact/email click" });
+  const trackLinkedInClick = (): void => trackCustomEvent({ category: "contact/linkedin",  action: "contact/linkedIn click" });
+
   return (
     <ComponentContainer>
       <Text>{data}</Text>
       <ContactLinkContainer>
-        <ContactLink href="mailto:contact@tamasnovak.net"><StyledIcon icon={iconList.email} dimensions="large"></StyledIcon></ContactLink>
-        <ContactLink href="https://www.linkedin.com/in/tamasnvk/" target="_blank" rel="noopener noreferrer"><StyledIcon icon={iconList.linkedIn} dimensions="large"></StyledIcon></ContactLink>
+        <ContactLink href="mailto:contact@tamasnovak.net" onClick={trackEmailClick}>
+          <StyledIcon icon={iconList.email} dimensions="large"></StyledIcon>
+        </ContactLink>
+        <ContactLink href="https://www.linkedin.com/in/tamasnvk/" target="_blank" rel="noopener noreferrer" onClick={trackLinkedInClick}>
+          <StyledIcon icon={iconList.linkedIn} dimensions="large"></StyledIcon>
+        </ContactLink>
       </ContactLinkContainer>
     </ComponentContainer>
   );

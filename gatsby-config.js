@@ -2,9 +2,18 @@ module.exports = {
   siteMetadata: {
     description: "project-005 || tamasnvk",
     title: "Portfolio Page",
-    url: "https://www.tamasnovak.net"
+    url: "http://www.tamasnovak.net"
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-176112748-4",
+        head: false,
+        anonymize: false,
+        respectDNT: false
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-json",
@@ -40,15 +49,6 @@ module.exports = {
           utilities: "src/utilities"
         }
       }
-    },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: process.env.GA_KEY,
-        head: false,
-        anonymize: true,
-        respectDNT: true
-      },
     },
   ],
 }

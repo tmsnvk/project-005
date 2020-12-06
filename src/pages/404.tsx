@@ -42,7 +42,7 @@ const NotFound = () => {
           The requested page does not exist.
         </NotFoundText>
         <NotFoundText>
-          <ReturnLink to={"/"}>Return</ReturnLink> to the site.
+          <ReturnLink to={"/"}>Return</ReturnLink> to the main page.
         </NotFoundText>
       </NotFoundTextContainer>
       <Footer />

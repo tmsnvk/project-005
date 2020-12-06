@@ -14,11 +14,17 @@ export type TTechList = {
 
 export type TList = {
   demoLink: string;
-  description: string;
+  description: {
+    id: number;
+    paragraph: string;
+  }[];
   githubLink: string;
   id: number;
   title: string;
   subtitle: string;
-  tags: string[];
+  tags: {
+    id: number;
+    name: string;
+  }[];
   image: string;
 }

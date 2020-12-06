@@ -18,14 +18,14 @@ type TQuery = {
 
 const SEO = ({ title }: TComponent) => {
   const data = useStaticQuery<TQuery>(graphql`
-    {
-      site {
-        siteMetadata {
-          description, url
-        }
-        buildTime
+  {
+    site {
+      siteMetadata {
+        description, url
       }
+      buildTime
     }
+  }
   `);
 
   return (

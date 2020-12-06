@@ -52,18 +52,18 @@ type TComponent = {
 }
 
 const Description = ({ data }: TComponent) => {
-  const renderDescription = data.description.map((element) => {
+  const renderDescription = data.description.map(({ id, paragraph }) => {
     return (
-      <DescriptionParagraph key={element.id}>
-        {element.paragraph}
+      <DescriptionParagraph key={id}>
+        {paragraph}
       </DescriptionParagraph>
     );
   });
 
-  const renderTechList = data.techlist.map((element) => {
+  const renderTechList = data.techlist.map(({ id, name }) => {
     return (
-      <TechListItem key={element.id}>
-        {element.name}
+      <TechListItem key={id}>
+        {name}
       </TechListItem>
     );
   });

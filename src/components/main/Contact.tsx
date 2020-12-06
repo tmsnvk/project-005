@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
-import { ContactTab } from "components/common/contact";
+import { ContactTab } from "components/section/contact";
 import { Title } from "components/shared";
 
 const SectionContainer = styled.section`

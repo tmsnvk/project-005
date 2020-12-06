@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
-import { ProjectCard } from "components/common/portfolio";
+import { ProjectCard } from "components/section/portfolio";
 import { Title } from "components/shared";
 import { TList } from "utilities/sharedTypes/sharedTypes";
 
@@ -33,7 +33,13 @@ const Portfolio = () => {
       dataJson {
         projects {
           list {
-            demoLink, description, githubLink, id, image, title, subtitle, tags
+            description {
+              id, paragraph
+            }
+            tags {
+              id, name
+            }
+            demoLink, githubLink, id, image, title, subtitle
           }
           title
         }

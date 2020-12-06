@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
-import { TDescription, TTechList } from "utilities/sharedTypes/sharedTypes";
-import { Description } from "components/common/about";
+import { Description } from "components/section/about";
 import { Title } from "components/shared";
+import { TDescription, TTechList } from "utilities/sharedTypes/sharedTypes";
 
 const SectionContainer = styled.section`
   grid-column-start: 1;

@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
-import { Statement } from "components/common/header";
+import { Statement } from "components/section/header";
 import { Title } from "components/shared";
 
 const SectionContainer = styled.header`

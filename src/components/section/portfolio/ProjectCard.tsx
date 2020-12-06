@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 import styled from "styled-components";
 import { StyledIcon } from "components/shared";
 import { TList } from "utilities/sharedTypes/sharedTypes";
@@ -93,8 +94,16 @@ const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSize.small};
   padding: 1rem 1.5rem 5rem 2.5rem;
 
+  &:first-of-type {
+    padding: 1rem 1.5rem 0 2.5rem;
+  }
+
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
     padding: 1rem 5rem 5rem 5rem;
+
+    &:first-of-type {
+      padding: 1rem 5rem 0 5rem;
+    }
   }
 `;
 
@@ -102,29 +111,50 @@ type TComponent = {
   data: Array<TList>;
 }
 
+type TVisitor = {
+  label: string;
+}
+
 const ProjectCard = ({ data }: TComponent) => {
-  const renderProjectCard = data.map((element) => {
+  const [visitorUrl, setVisitorUrl] = useState<TVisitor>({ label: "" });
+
+  useEffect(() => {
+    if (window.location.href.includes("?utm_source=")) {
+      const getUtm = () => setVisitorUrl({ label: window.location.href.substring(window.location.href.indexOf("=") + 1) });
+
+      getUtm();
+      return () => setVisitorUrl({ label: "" });
+    }
+  }, [setVisitorUrl]);
+
+  const renderProjectCard = data.map(({ demoLink, description, githubLink, id, image, subtitle, tags, title }) => {
+    const trackGitClick = (): void => trackCustomEvent({ category: githubLink,  action: "github code click", label: visitorUrl.label });
+    const trackDemoClick = (): void => trackCustomEvent({ category: demoLink,  action: "live code click", label: visitorUrl.label });
+
     return (
-      <CardContainer key={element.id}>
-        {element.image !== "" ? <Image src={element.image} /> : null}
+      <CardContainer key={id}>
+        {image !== "" ? <Image src={image} alt="project sample image" /> : null}
         <Title>
-          {element.title}
+          {title}
         </Title>
         <SubTitle>
-          {element.subtitle}
+          {subtitle}
         </SubTitle>
         <LinkContainer>
-          <ProjectLink href={element.githubLink} target="_blank" rel="noopener noreferrer"><StyledIcon icon={iconList.github} dimensions="normal"></StyledIcon>Github</ProjectLink>
-          {element.demoLink !== "" ? <ProjectLink href={element.demoLink} target="_blank" rel="noopener noreferrer"><StyledIcon icon={iconList.live} dimensions="normal"></StyledIcon>Live</ProjectLink> : null}
+          {githubLink !== "" ? <ProjectLink href={githubLink} target="_blank" rel="noopener noreferrer" onClick={trackGitClick}><StyledIcon icon={iconList.github} dimensions="normal"></StyledIcon>Github</ProjectLink> : null}
+          {demoLink !== "" ? <ProjectLink href={demoLink} target="_blank" rel="noopener noreferrer" onClick={trackDemoClick}><StyledIcon icon={iconList.live} dimensions="normal"></StyledIcon>Live</ProjectLink> : null}
         </LinkContainer>
         <TagContainer>
-          {element.tags[0] ? <Tag>{element.tags[0]}</Tag> : null}
-          {element.tags[1] ? <Tag>{element.tags[1]}</Tag> : null}
-          {element.tags[2] ? <Tag>{element.tags[2]}</Tag> : null}
-          {element.tags[3] ? <Tag>{element.tags[3]}</Tag> : null}
+          {tags[0]?.name ? <Tag key={tags[0].id}>{tags[0].name}</Tag> : null}
+          {tags[1]?.name ? <Tag key={tags[1].id}>{tags[1].name}</Tag> : null}
+          {tags[2]?.name ? <Tag key={tags[2].id}>{tags[2].name}</Tag> : null}
+          {tags[3]?.name ? <Tag key={tags[3].id}>{tags[3].name}</Tag> : null}
         </TagContainer>
-        <Description>
-          {element.description}
+        <Description key={description[0].id}>
+          {description[0].paragraph}
+        </Description>
+        <Description key={description[1].id}>
+          {description[1].paragraph}
         </Description>
       </CardContainer>
     );
