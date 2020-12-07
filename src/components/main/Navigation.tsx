@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 import styled from "styled-components";
+import analyticsStore from "utilities/store/analyticsStore";
+import { trackClick } from "utilities/helpers/analytics";
 
 const ComponentContainer = styled.nav`
   grid-column-start: 1;
@@ -55,7 +56,9 @@ const SectionLink = styled(Link)`
 `;
 
 const Navigation = () => {
-  const trackAnchorClick = (): void => trackCustomEvent({ category: "nav anchor", action: "nav click" });
+  const source = analyticsStore((state) => state.source);
+
+  const trackAnchorClick = (): void => trackClick(`nav anchor click by ${source}`, `click by ${source}`);
 
   return (
     <ComponentContainer>

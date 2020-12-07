@@ -1,9 +1,10 @@
 import React from "react";
-import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 import styled from "styled-components";
 import { StyledIcon } from "components/shared";
 import iconList from "utilities/iconList/iconList";
 import { TComponent } from "utilities/sharedTypes/sharedTypes";
+import analyticsStore from "utilities/store/analyticsStore";
+import { trackClick } from "utilities/helpers/analytics";
 
 const ComponentContainer = styled.div`
   display: flex;
@@ -52,8 +53,10 @@ const ContactLink = styled.a`
 `;
 
 const ContactTab = ({ data }: TComponent) => {
-  const trackEmailClick = (): void => trackCustomEvent({ category: "contact/email",  action: "contact/email click" });
-  const trackLinkedInClick = (): void => trackCustomEvent({ category: "contact/linkedin",  action: "contact/linkedIn click" });
+  const source = analyticsStore((state) => state.source);
+
+  const trackEmailClick = (): void => trackClick(`contact/email ${source}`, `contact/email click ${source}`);
+  const trackLinkedInClick = (): void => trackClick(`contact/linkedin ${source}`, `contact/linkedIn click ${source}`);
 
   return (
     <ComponentContainer>

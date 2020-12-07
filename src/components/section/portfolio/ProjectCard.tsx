@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { trackCustomEvent } from "gatsby-plugin-google-analytics";
+import React from "react";
 import styled from "styled-components";
 import { StyledIcon } from "components/shared";
-import { TList } from "utilities/sharedTypes/sharedTypes";
 import iconList from "utilities/iconList/iconList";
+import { TList } from "utilities/sharedTypes/sharedTypes";
+import analyticsStore from "utilities/store/analyticsStore";
+import { trackClick } from "utilities/helpers/analytics";
 
 const ComponentContainer = styled.div`
   display: flex;
@@ -50,7 +51,7 @@ const SubTitle = styled.h3`
   padding: 0 0 0 2.5rem;
 `;
 
-const LinkContainer = styled.div`
+const ProjectLinkContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -111,25 +112,12 @@ type TComponent = {
   data: Array<TList>;
 }
 
-type TVisitor = {
-  label: string;
-}
-
 const ProjectCard = ({ data }: TComponent) => {
-  const [visitorUrl, setVisitorUrl] = useState<TVisitor>({ label: "" });
-
-  useEffect(() => {
-    if (window.location.href.includes("?utm_source=")) {
-      const getUtm = () => setVisitorUrl({ label: window.location.href.substring(window.location.href.indexOf("=") + 1) });
-
-      getUtm();
-      return () => setVisitorUrl({ label: "" });
-    }
-  }, [setVisitorUrl]);
+  const source = analyticsStore((state) => state.source);
 
   const renderProjectCard = data.map(({ demoLink, description, githubLink, id, image, subtitle, tags, title }) => {
-    const trackGitClick = (): void => trackCustomEvent({ category: githubLink,  action: "github code click", label: visitorUrl.label });
-    const trackDemoClick = (): void => trackCustomEvent({ category: demoLink,  action: "live code click", label: visitorUrl.label });
+    const trackGitClick = (): void => trackClick(`${githubLink} ${source}`, `github code click ${source}`);
+    const trackDemoClick = (): void => trackClick(`${demoLink} ${source}`, `live code click ${source}`);
 
     return (
       <CardContainer key={id}>
@@ -140,10 +128,10 @@ const ProjectCard = ({ data }: TComponent) => {
         <SubTitle>
           {subtitle}
         </SubTitle>
-        <LinkContainer>
+        <ProjectLinkContainer>
           {githubLink !== "" ? <ProjectLink href={githubLink} target="_blank" rel="noopener noreferrer" onClick={trackGitClick}><StyledIcon icon={iconList.github} dimensions="normal"></StyledIcon>Github</ProjectLink> : null}
           {demoLink !== "" ? <ProjectLink href={demoLink} target="_blank" rel="noopener noreferrer" onClick={trackDemoClick}><StyledIcon icon={iconList.live} dimensions="normal"></StyledIcon>Live</ProjectLink> : null}
-        </LinkContainer>
+        </ProjectLinkContainer>
         <TagContainer>
           {tags[0]?.name ? <Tag key={tags[0].id}>{tags[0].name}</Tag> : null}
           {tags[1]?.name ? <Tag key={tags[1].id}>{tags[1].name}</Tag> : null}
