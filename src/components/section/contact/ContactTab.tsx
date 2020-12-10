@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledIcon } from "components/shared";
-import iconList from "utilities/iconList/iconList";
 import { TComponent } from "utilities/sharedTypes/sharedTypes";
 import analyticsStore from "utilities/store/analyticsStore";
 import { trackClick } from "utilities/helpers/analytics";
+import iconList from "utilities/iconList/iconList";
 
 const ComponentContainer = styled.div`
   display: flex;

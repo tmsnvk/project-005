@@ -58,7 +58,7 @@ const SectionLink = styled(Link)`
 const Navigation = () => {
   const source = analyticsStore((state) => state.source);
 
-  const trackAnchorClick = (): void => trackClick(`nav anchor click by ${source}`, `click by ${source}`);
+  const trackAnchorClick = (): void => trackClick(`nav anchor click ${source}`, `click ${source}`);
 
   return (
     <ComponentContainer>

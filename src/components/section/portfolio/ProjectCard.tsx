@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledIcon } from "components/shared";
-import iconList from "utilities/iconList/iconList";
 import { TList } from "utilities/sharedTypes/sharedTypes";
 import analyticsStore from "utilities/store/analyticsStore";
 import { trackClick } from "utilities/helpers/analytics";
+import iconList from "utilities/iconList/iconList";
 
 const ComponentContainer = styled.div`
   display: flex;
@@ -116,12 +116,12 @@ const ProjectCard = ({ data }: TComponent) => {
   const source = analyticsStore((state) => state.source);
 
   const renderProjectCard = data.map(({ demoLink, description, githubLink, id, image, subtitle, tags, title }) => {
-    const trackGitClick = (): void => trackClick(`${githubLink} ${source}`, `github code click ${source}`);
-    const trackDemoClick = (): void => trackClick(`${demoLink} ${source}`, `live code click ${source}`);
+    const trackGitClick = (): void => trackClick(`${githubLink} ${source}`, `github click ${source}`);
+    const trackDemoClick = (): void => trackClick(`${demoLink} ${source}`, `live click ${source}`);
 
     return (
       <CardContainer key={id}>
-        {image !== "" ? <Image src={image} alt="project sample image" /> : null}
+        {image !== "" ? <Image src={image} alt="sample project image" /> : null}
         <Title>
           {title}
         </Title>
