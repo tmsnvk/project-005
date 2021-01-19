@@ -47,8 +47,8 @@ const About = () => {
 
   return (
     <SectionContainer>
-      <Title data={data.dataJson.about.title} />
-      <Description data={data.dataJson.about} />
+      <Title render={data.dataJson.about.title} />
+      <Description render={data.dataJson.about} />
     </SectionContainer>
   );
 };

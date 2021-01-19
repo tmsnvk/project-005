@@ -14,10 +14,12 @@ const SectionContainer = styled.footer`
   }
 `;
 
+const currentYear = new Date().getFullYear();
+
 const Footer = () => {
   return (
     <SectionContainer>
-      tamas novak with &#x2764;, 2020
+      tamas novak with &#x2764;, 2020 - {currentYear}
     </SectionContainer>
   );
 };

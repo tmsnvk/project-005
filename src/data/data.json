@@ -1,14 +1,14 @@
 {
   "header": {
     "title": "Hi, I am Tamas.",
-    "statement": "I am a self-taught web developer who is looking for his first full-time front-end position."
+    "statement": "I am an aspiring self-taught web developer who is looking for his first full-time front-end position."
   },
   "about": {
     "title": "About me",
     "description": [
       {
         "id": 1,
-        "paragraph": "A big part of my bachelor studies revolved around HTML, CSS and JS in the late 2000s, and while I continued my master studies with a social/political science angle and later worked as a teacher in different institutions, my interest in coding in general never wavered."
+        "paragraph": "A big part of my bachelor studies revolved around HTML, CSS and JS in the late 2000s, and while I continued my master studies with a social/political science angle and later worked as a teacher, my interest in coding in general never wavered."
       },
       {
         "id": 2,
@@ -28,8 +28,9 @@
       { "id": 2, "name": "Javascript/Typescript" },
       { "id": 3, "name": "React" },
       { "id": 4, "name": "Gatsby" },
-      { "id": 5, "name": "Node.JS/Express" },
-      { "id": 6, "name": "MongoDB" }
+      { "id": 5, "name": "Node.JS" },
+      { "id": 6, "name": "Express/Nest.JS" },
+      { "id": 7, "name": "MongoDB" }
     ]
   },
   "projects": {
@@ -65,19 +66,19 @@
         "description": [
           {
             "id": 1,
-            "paragraph": "A React front-end and Node.JS/Express back-end application extended with Typescript that fetches and displays news items based on various country/category selection."
+            "paragraph": "A React front-end and Node.JS/Nest.JS back-end application extended with Typescript that fetches and displays news items based on various country/category selections."
           },
           {
             "id": 2,
-            "paragraph": "The live code is currently deployed on a free tier option on Heroku, so it might need a minute or two to boot up."
+            "paragraph": "The server-side code might need a minute or two to boot up as it is currently hosted on a free tier option @Heroku."
           }
         ],
         "githubLink": "https://github.com/tmsnvk/project-002",
-        "demoLink": "https://newsindex.herokuapp.com/",
+        "demoLink": "https://tamasnovak.net/newsindex/",
         "tags": [
           { "id": 1, "name": "typescript" },
           { "id": 2, "name": "react" },
-          { "id": 3, "name": "node.js/express" }
+          { "id": 3, "name": "node.js/nest.js" }
         ]
       },
       {

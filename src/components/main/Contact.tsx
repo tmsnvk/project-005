@@ -39,8 +39,8 @@ const Contact = () => {
 
   return (
     <SectionContainer>
-      <Title data={data.dataJson.contact.title} />
-      <ContactTab data={data.dataJson.contact.statement} />
+      <Title render={data.dataJson.contact.title} />
+      <ContactTab render={data.dataJson.contact.statement} />
     </SectionContainer>
   );
 };

@@ -15,10 +15,10 @@ const ComponentContainer = styled.p`
   }
 `;
 
-const Statement = ({ data }: TComponent) => {  
+const Statement = ({ render }: TComponent) => {  
   return (
     <ComponentContainer>
-      {data}
+      {render}
     </ComponentContainer>
   );
 };

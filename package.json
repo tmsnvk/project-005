@@ -1,12 +1,10 @@
 {
-  "name": "project-005",
-  "description": "project-005",
+  "name": "project-005_gatsby_frontend",
+  "description": "project-005_gatsby_frontend",
   "main": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "tamasnvk",
-  "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",

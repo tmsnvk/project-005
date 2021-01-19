@@ -15,10 +15,10 @@ const ComponentContainer = styled.h1`
   }
 `;
 
-const Title = ({ data }: TComponent) => {  
+const Title = ({ render }: TComponent) => {  
   return (
     <ComponentContainer>
-      {data}
+      {render}
     </ComponentContainer>
   );
 };

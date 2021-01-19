@@ -1,5 +1,5 @@
 export type TComponent = {
-  data: string;
+  render: string;
 }
 
 export type TDescription = {

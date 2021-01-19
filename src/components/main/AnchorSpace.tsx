@@ -11,7 +11,7 @@ const ComponentContainer = styled.div<TStyled>`
   grid-column-end: 2;
   grid-row-start: ${props => props.rowstart};
   grid-row-end: ${props => props.rowend};
-  height: 5rem;
+  height: 10rem;
 
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
     grid-column-end: 3;
@@ -24,7 +24,7 @@ type TComponent = {
   rowend: number;
 }
 
-const AnchorSpace = ({ id, rowstart, rowend }: TComponent)=> {  
+const AnchorSpace = ({ id, rowstart, rowend }: TComponent)=> {
   return (
     <ComponentContainer id={id} rowstart={rowstart} rowend={rowend}></ComponentContainer>
   );

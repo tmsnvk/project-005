@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-type TIcon = {
+type TStyledIcon = {
   dimensions: string;
 }
 
-const StyledIcon = styled(FontAwesomeIcon)<TIcon>`
+const StyledIcon = styled(FontAwesomeIcon)<TStyledIcon>`
   display: inline-block;
   color: ${({ theme }) => theme.color.primaryDark};
   font-size: ${({ dimensions }) => dimensions === "large" ? ({ theme }) => theme.fontSize.xLarge : ({ theme }) => theme.fontSize.medium};

@@ -49,8 +49,8 @@ const Portfolio = () => {
 
   return (
     <SectionContainer>
-      <Title data={data.dataJson.projects.title} />
-      <ProjectCard data={data.dataJson.projects.list} />
+      <Title render={data.dataJson.projects.title} />
+      <ProjectCard render={data.dataJson.projects.list} />
     </SectionContainer>
   );
 };

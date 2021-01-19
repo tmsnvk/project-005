@@ -39,8 +39,8 @@ const Header = () => {
 
   return (
     <SectionContainer>
-      <Title data={data.dataJson.header.title} />
-      <Statement data={data.dataJson.header.statement} />
+      <Title render={data.dataJson.header.title} />
+      <Statement render={data.dataJson.header.statement} />
     </SectionContainer>
   );
 };

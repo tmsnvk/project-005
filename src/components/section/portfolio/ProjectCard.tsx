@@ -93,29 +93,29 @@ const Tag = styled.li`
 
 const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSize.small};
-  padding: 1rem 1.5rem 5rem 2.5rem;
+  padding: 1rem 1.5rem 5rem 1.5rem;
 
   &:first-of-type {
-    padding: 1rem 1.5rem 0 2.5rem;
+    padding: 1rem 1.5rem 0 1.5rem;
   }
 
   @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
-    padding: 1rem 5rem 5rem 5rem;
+    padding: 1rem 2.5rem 5rem 5rem;
 
     &:first-of-type {
-      padding: 1rem 5rem 0 5rem;
+      padding: 1rem 2.5rem 0 5rem;
     }
   }
 `;
 
 type TComponent = {
-  data: Array<TList>;
+  render: Array<TList>;
 }
 
-const ProjectCard = ({ data }: TComponent) => {
+const ProjectCard = ({ render }: TComponent) => {
   const source = analyticsStore((state) => state.source);
 
-  const renderProjectCard = data.map(({ demoLink, description, githubLink, id, image, subtitle, tags, title }) => {
+  const renderProjectCard = render.map(({ demoLink, description, githubLink, id, image, subtitle, tags, title }) => {
     const trackGitClick = (): void => trackClick(`${githubLink} ${source}`, `github click ${source}`);
     const trackDemoClick = (): void => trackClick(`${demoLink} ${source}`, `live click ${source}`);
 

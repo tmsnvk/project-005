@@ -33,7 +33,7 @@ const TechListContainer = styled.ul`
   font-weight: 600;
   margin: 0 0 0 2rem;
 
-  @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.large}) {
+  @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
     grid-template-columns: repeat(2, 20rem);
     font-size: ${({ theme }) => theme.fontSize.small};
     margin: 0 0 0 5rem;
@@ -45,14 +45,14 @@ const TechListItem = styled.li`
 `;
 
 type TComponent = {
-  data: {
+  render: {
     description: Array<TDescription>;
     techlist: Array<TTechList>;
   };
 }
 
-const Description = ({ data }: TComponent) => {
-  const renderDescription = data.description.map(({ id, paragraph }) => {
+const Description = ({ render }: TComponent) => {
+  const renderDescription = render.description.map(({ id, paragraph }) => {
     return (
       <DescriptionParagraph key={id}>
         {paragraph}
@@ -60,7 +60,7 @@ const Description = ({ data }: TComponent) => {
     );
   });
 
-  const renderTechList = data.techlist.map(({ id, name }) => {
+  const renderTechList = render.techlist.map(({ id, name }) => {
     return (
       <TechListItem key={id}>
         {name}

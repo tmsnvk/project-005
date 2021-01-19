@@ -1,7 +1,7 @@
 ### portfolio page || project-005
 #### description
-+ a Gatsby generated static site and extended with Typescript. The application is a simple portfolio site that includes project descriptions, links and means of contact.
-+ the site is deployed [here](https://tamasnovak.net/).
++ a Gatsby generated static site extended with Typescript. The application is a simple portfolio site that includes project descriptions, links and means of contact.
++ the site is deployed [here](https://tamasnovak.net/?utm_source=github).
 
 #### used packages
 ```

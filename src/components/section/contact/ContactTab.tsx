@@ -52,7 +52,7 @@ const ContactLink = styled.a`
   }
 `;
 
-const ContactTab = ({ data }: TComponent) => {
+const ContactTab = ({ render }: TComponent) => {
   const source = analyticsStore((state) => state.source);
 
   const trackEmailClick = (): void => trackClick(`contact/email ${source}`, `contact/email click ${source}`);
@@ -60,7 +60,7 @@ const ContactTab = ({ data }: TComponent) => {
 
   return (
     <ComponentContainer>
-      <Text>{data}</Text>
+      <Text>{render}</Text>
       <ContactLinkContainer>
         <ContactLink href="mailto:contact@tamasnovak.net" onClick={trackEmailClick}>
           <StyledIcon icon={iconList.email} dimensions="large"></StyledIcon>
