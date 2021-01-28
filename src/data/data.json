@@ -26,10 +26,10 @@
     "techlist": [
       { "id": 1, "name": "HTML/CSS" },
       { "id": 2, "name": "Javascript/Typescript" },
-      { "id": 3, "name": "React" },
+      { "id": 3, "name": "ReactJS" },
       { "id": 4, "name": "Gatsby" },
-      { "id": 5, "name": "Node.JS" },
-      { "id": 6, "name": "Express/Nest.JS" },
+      { "id": 5, "name": "NodeJS" },
+      { "id": 6, "name": "ExpressJS/NestJS" },
       { "id": 7, "name": "MongoDB" }
     ]
   },
@@ -66,7 +66,7 @@
         "description": [
           {
             "id": 1,
-            "paragraph": "A React front-end and Node.JS/Nest.JS back-end application extended with Typescript that fetches and displays news items based on various country/category selections."
+            "paragraph": "A ReactJS front-end and NodeJS/NestJS back-end application that fetches and displays news items based on various country/category selections."
           },
           {
             "id": 2,
@@ -77,8 +77,8 @@
         "demoLink": "https://tamasnovak.net/newsindex/",
         "tags": [
           { "id": 1, "name": "typescript" },
-          { "id": 2, "name": "react" },
-          { "id": 3, "name": "node.js/nest.js" }
+          { "id": 2, "name": "reactjs" },
+          { "id": 3, "name": "nestjs" }
         ]
       },
       {
@@ -89,19 +89,20 @@
         "description": [
           {
             "id": 1,
-            "paragraph": "A React front-end and Node.JS/Express back-end application using MongoDB to store site-specific data. The application imitates a subscription-based service site with form submit pages and a search functionality serving a public API database."
+            "paragraph": "A ReactJS front-end and NodeJS/NestJS back-end application using MongoDB to store site/user-specific data. The application imitates a subscription-based service site with two form submit pages, automatic email confirmation and a search functionality serving a public API database."
           },
           {
             "id": 2,
-            "paragraph": "The live code is currently deployed on a free tier option on Heroku, so it might need a minute or two to boot up."
+            "paragraph": "The server-side code might need a minute or two to boot up as it is currently hosted on a free tier option @Heroku."
           }
         ],
         "githubLink": "https://github.com/tmsnvk/central_kanto_pokemon_database",
-        "demoLink": "https://ckpd.herokuapp.com/",
+        "demoLink": "https://tamasnovak.net/ckpd/",
         "tags": [
-          { "id": 1, "name": "react" },
-          { "id": 2, "name": "node.js/express" },
-          { "id": 3, "name": "mongodb" }
+          { "id": 1, "name": "reactjs" },
+          { "id": 2, "name": "typescript" },
+          { "id": 3, "name": "nestjs" },
+          { "id": 4, "name": "mongodb" }
         ]
       },
       {
@@ -112,7 +113,7 @@
         "description": [
           {
             "id": 1,
-            "paragraph": "A React front-end and Node.JS/Express back-end application using MongoDB to store site-specific data. The application is a choose-your-own-adventure story game. It includes multiple adventures to choose from, form submit pages, user statistics and achievements tracking with a possibility to reset progress, different colour themes and more."
+            "paragraph": "A ReactJS front-end and NodeJS/ExpressJS back-end application using MongoDB to store site-specific data. The application is a choose-your-own-adventure story game. It includes multiple adventures to choose from, form submit pages, user statistics and achievements tracking with a possibility to reset progress, different colour themes and more."
           },
           {
             "id": 2,
@@ -122,8 +123,8 @@
         "githubLink": "https://github.com/tmsnvk/evrallas",
         "demoLink": "https://evrallas.herokuapp.com/",
         "tags": [
-          { "id": 1, "name": "react" },
-          { "id": 2, "name": "node.js/express" },
+          { "id": 1, "name": "reactjs" },
+          { "id": 2, "name": "expressjs" },
           { "id": 3, "name": "mongodb" }
         ]
       },
@@ -135,7 +136,7 @@
         "description": [
           {
             "id": 1,
-            "paragraph": "The site is a simple Gatsby generated static site extended with Typescript to showcase some of my projects."
+            "paragraph": "The site is a simple Gatsby generated static site to showcase some of my projects."
           },
           {
             "id": 2,
