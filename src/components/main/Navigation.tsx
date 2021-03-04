@@ -38,13 +38,18 @@ const NameLink = styled(Link)`
 `;
 
 const SectionLinkContainer = styled.div`
+  margin: 1rem 0 0 0;
   font-size: ${({ theme }) => theme.fontSize.large};
+
+  @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
+    margin: 0 0 0 0;
+  }
 `;
 
 const SectionLink = styled(Link)`
   font-weight: 600;
   letter-spacing: 0.1rem;
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
 
   &:hover {
     color: ${({ theme }) => theme.color.secondary};
@@ -63,12 +68,12 @@ const Navigation = () => {
   return (
     <ComponentContainer>
       <NameContainer>
-        <NameLink to="/">tamas novak</NameLink>
+        <NameLink to={"/"}>tamas novak</NameLink>
       </NameContainer>
       <SectionLinkContainer>
-        <SectionLink to="/#about" onClick={trackAnchorClick}>About</SectionLink>
-        <SectionLink to="/#portfolio" onClick={trackAnchorClick}>Portfolio</SectionLink>
-        <SectionLink to="/#contact" onClick={trackAnchorClick}>Contact</SectionLink>
+        <SectionLink to={"/#about"} onClick={trackAnchorClick}>About</SectionLink>
+        <SectionLink to={"/#portfolio"} onClick={trackAnchorClick}>Portfolio</SectionLink>
+        <SectionLink to={"/#contact"} onClick={trackAnchorClick}>Contact</SectionLink>
       </SectionLinkContainer>
     </ComponentContainer>
   );

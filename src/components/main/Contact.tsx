@@ -20,10 +20,10 @@ const SectionContainer = styled.section`
 type TQuery = {
   dataJson: {
     contact: {
-      statement: string;
-      title: string;
-    };
-  };
+      statement: string
+      title: string
+    }
+  }
 }
 
 const Contact = () => {

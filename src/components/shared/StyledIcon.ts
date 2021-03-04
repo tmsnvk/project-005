@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type TStyledIcon = {
-  dimensions: string;
+  dimensions: string
 }
 
 const StyledIcon = styled(FontAwesomeIcon)<TStyledIcon>`

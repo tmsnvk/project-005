@@ -62,11 +62,11 @@ const ContactTab = ({ render }: TComponent) => {
     <ComponentContainer>
       <Text>{render}</Text>
       <ContactLinkContainer>
-        <ContactLink href="mailto:contact@tamasnovak.net" onClick={trackEmailClick}>
-          <StyledIcon icon={iconList.email} dimensions="large"></StyledIcon>
+        <ContactLink href={"mailto:contact@tamasnovak.net"} onClick={trackEmailClick}>
+          <StyledIcon icon={iconList.email} dimensions={"large"}></StyledIcon>
         </ContactLink>
-        <ContactLink href="https://www.linkedin.com/in/tamasnvk/" target="_blank" rel="noopener noreferrer" onClick={trackLinkedInClick}>
-          <StyledIcon icon={iconList.linkedIn} dimensions="large"></StyledIcon>
+        <ContactLink href={"https://www.linkedin.com/in/tamasnvk/"} target={"_blank"} rel={"noopener noreferrer"} onClick={trackLinkedInClick}>
+          <StyledIcon icon={iconList.linkedIn} dimensions={"large"}></StyledIcon>
         </ContactLink>
       </ContactLinkContainer>
     </ComponentContainer>

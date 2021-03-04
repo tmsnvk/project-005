@@ -109,7 +109,7 @@ const Description = styled.p`
 `;
 
 type TComponent = {
-  render: Array<TList>;
+  render: Array<TList>
 }
 
 const ProjectCard = ({ render }: TComponent) => {
@@ -121,7 +121,7 @@ const ProjectCard = ({ render }: TComponent) => {
 
     return (
       <CardContainer key={id}>
-        {image !== "" ? <Image src={image} alt="sample project image" /> : null}
+        {image !== "" ? <Image src={image} alt={"sample project image"} /> : null}
         <Title>
           {title}
         </Title>
@@ -129,8 +129,8 @@ const ProjectCard = ({ render }: TComponent) => {
           {subtitle}
         </SubTitle>
         <ProjectLinkContainer>
-          {githubLink !== "" ? <ProjectLink href={githubLink} target="_blank" rel="noopener noreferrer" onClick={trackGitClick}><StyledIcon icon={iconList.github} dimensions="normal"></StyledIcon>Github</ProjectLink> : null}
-          {demoLink !== "" ? <ProjectLink href={demoLink} target="_blank" rel="noopener noreferrer" onClick={trackDemoClick}><StyledIcon icon={iconList.live} dimensions="normal"></StyledIcon>Live</ProjectLink> : null}
+          {githubLink !== "" ? <ProjectLink href={githubLink} target={"_blank"} rel={"noopener noreferrer"} onClick={trackGitClick}><StyledIcon icon={iconList.github} dimensions={"normal"}></StyledIcon>Github</ProjectLink> : null}
+          {demoLink !== "" ? <ProjectLink href={demoLink} target={"_blank"} rel={"noopener noreferrer"} onClick={trackDemoClick}><StyledIcon icon={iconList.live} dimensions={"normal"}></StyledIcon>Live</ProjectLink> : null}
         </ProjectLinkContainer>
         <TagContainer>
           {tags[0]?.name ? <Tag key={tags[0].id}>{tags[0].name}</Tag> : null}

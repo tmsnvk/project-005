@@ -20,10 +20,10 @@ const SectionContainer = styled.header`
 type TQuery = {
   dataJson: {
     header: {
-      statement: string;
-      title: string;
-    };
-  };
+      statement: string
+      title: string
+    }
+  }
 }
 
 const Header = () => {

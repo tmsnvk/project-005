@@ -21,11 +21,11 @@ const SectionContainer = styled.section`
 type TQuery = {
   dataJson: {
     about: {
-      description: Array<TDescription>;
-      techlist: Array<TTechList>;
-      title: string;
-    };
-  };
+      description: Array<TDescription>
+      techlist: Array<TTechList>
+      title: string
+    }
+  }
 }
 
 const About = () => {

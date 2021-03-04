@@ -1,30 +1,30 @@
 export type TComponent = {
-  render: string;
+  render: string
 }
 
 export type TDescription = {
-  id: number;
-  paragraph: string;
+  id: number
+  paragraph: string
 }
 
 export type TTechList = {
-  id: number;
-  name: string;
+  id: number
+  name: string
 }
 
 export type TList = {
-  demoLink: string;
+  demoLink: string
   description: {
-    id: number;
-    paragraph: string;
-  }[];
-  githubLink: string;
-  id: number;
-  title: string;
-  subtitle: string;
+    id: number
+    paragraph: string
+  }[]
+  githubLink: string
+  id: number
+  title: string
+  subtitle: string
   tags: {
-    id: number;
-    name: string;
-  }[];
-  image: string;
+    id: number
+    name: string
+  }[]
+  image: string
 }

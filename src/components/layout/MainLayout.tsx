@@ -16,7 +16,7 @@ const LayoutContainer = styled.main`
 `;
 
 type TComponent = {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const MainLayout = ({ children }: TComponent) => {

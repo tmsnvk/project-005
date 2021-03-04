@@ -3,17 +3,17 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 
 type TComponent = {
-  title: string;
+  title: string
 }
 
 type TQuery = {
   site: {
     siteMetadata: {
-      description: string;
-      url: string;
-    };
-    buildTime: string;
-  };
+      description: string
+      url: string
+    }
+    buildTime: string
+  }
 }
 
 const SEO = ({ title }: TComponent) => {
@@ -30,14 +30,14 @@ const SEO = ({ title }: TComponent) => {
 
   return (
     <Helmet>
-      <html lang="en" />
+      <html lang={"en"} />
       <title>{title}</title>
-      <meta http-equiv="x-ua-compatible" content="ie=edge" />
-      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-      <meta name="description" content={data.site.siteMetadata.description} />
-      <meta property="tamasnvk:generated" content={data.site.buildTime} />
-      <link rel="canonical" href={data.site.siteMetadata.url} />
-      <link rel="author" href="https://www.linkedin.com/in/tamasnvk/" />
+      <meta http-equiv={"x-ua-compatible"} content={"ie=edge"} />
+      <meta name={"viewport"} content={"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"} />
+      <meta name={"description"} content={data.site.siteMetadata.description} />
+      <meta property={"tamasnvk:generated"} content={data.site.buildTime} />
+      <link rel={"canonical"} href={data.site.siteMetadata.url} />
+      <link rel={"author"} href={"https://www.linkedin.com/in/tamasnvk/"} />
     </Helmet>
   );
 };

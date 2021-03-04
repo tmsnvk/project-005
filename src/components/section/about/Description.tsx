@@ -27,28 +27,21 @@ const DescriptionParagraph = styled.p`
 `;
 
 const TechListContainer = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(2, 12rem);
-  font-size: ${({ theme }) => theme.fontSize.default};
+  margin: 0 0 0 5rem;
+  font-size: ${({ theme }) => theme.fontSize.small};
   font-weight: 600;
-  margin: 0 0 0 2rem;
-
-  @media only screen and (min-width: ${({ theme }) => theme.mediaQuery.medium}) {
-    grid-template-columns: repeat(2, 20rem);
-    font-size: ${({ theme }) => theme.fontSize.small};
-    margin: 0 0 0 5rem;
-  }
 `;
 
 const TechListItem = styled.li`
+  padding: 0.5rem 0 0 0;
   list-style: square;
 `;
 
 type TComponent = {
   render: {
-    description: Array<TDescription>;
-    techlist: Array<TTechList>;
-  };
+    description: Array<TDescription>
+    techlist: Array<TTechList>
+  }
 }
 
 const Description = ({ render }: TComponent) => {

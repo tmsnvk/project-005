@@ -1,8 +1,8 @@
 type TIconList = {
-  github: any;
-  linkedIn: any;
-  live: any;
-  email: any;
+  github: any
+  linkedIn: any
+  live: any
+  email: any
 }
 
 const iconList: TIconList = {

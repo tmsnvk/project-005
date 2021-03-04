@@ -21,10 +21,10 @@ const SectionContainer = styled.section`
 type TQuery = {
   dataJson: {
     projects: {
-      list: Array<TList>;
-      title: string;
-    };
-  };
+      list: Array<TList>
+      title: string
+    }
+  }
 }
 
 const Portfolio = () => {

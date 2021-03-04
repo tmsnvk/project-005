@@ -26,11 +26,9 @@
     "techlist": [
       { "id": 1, "name": "HTML/CSS" },
       { "id": 2, "name": "Javascript/Typescript" },
-      { "id": 3, "name": "ReactJS" },
-      { "id": 4, "name": "Gatsby" },
-      { "id": 5, "name": "NodeJS" },
-      { "id": 6, "name": "ExpressJS/NestJS" },
-      { "id": 7, "name": "MongoDB" }
+      { "id": 3, "name": "ReactJS/NextJS/Gatsby" },
+      { "id": 4, "name": "NodeJS/ExpressJS/NestJS" },
+      { "id": 5, "name": "MongoDB" }
     ]
   },
   "projects": {
@@ -74,7 +72,7 @@
           }
         ],
         "githubLink": "https://github.com/tmsnvk/project-002",
-        "demoLink": "https://tamasnovak.net/newsindex/",
+        "demoLink": "https://tamasnovak.net/newsindex/?utm_source=portfolio",
         "tags": [
           { "id": 1, "name": "typescript" },
           { "id": 2, "name": "reactjs" },
@@ -96,8 +94,8 @@
             "paragraph": "The server-side code might need a minute or two to boot up as it is currently hosted on a free tier option @Heroku."
           }
         ],
-        "githubLink": "https://github.com/tmsnvk/central_kanto_pokemon_database",
-        "demoLink": "https://tamasnovak.net/ckpd/",
+        "githubLink": "https://github.com/tmsnvk/project-003",
+        "demoLink": "https://tamasnovak.net/ckpd/?utm_source=portfolio",
         "tags": [
           { "id": 1, "name": "reactjs" },
           { "id": 2, "name": "typescript" },
@@ -117,11 +115,11 @@
           },
           {
             "id": 2,
-            "paragraph": "The live code is currently deployed on a free tier option on Heroku, so it might need a minute or two to boot up."
+            "paragraph": "The live code might need a minute or two to boot up as it is currently hosted on a free tier option @Heroku."
           }
         ],
-        "githubLink": "https://github.com/tmsnvk/evrallas",
-        "demoLink": "https://evrallas.herokuapp.com/",
+        "githubLink": "https://github.com/tmsnvk/project-004",
+        "demoLink": "https://evrallas.herokuapp.com/?utm_source=portfolio",
         "tags": [
           { "id": 1, "name": "reactjs" },
           { "id": 2, "name": "expressjs" },
@@ -148,6 +146,30 @@
         "tags": [
           { "id": 1, "name": "typescript" },
           { "id": 2, "name": "gatsby" }
+        ]
+      },
+      {
+        "id": 6,
+        "image": "/images/project-006.png",
+        "title": "SavvyJar",
+        "subtitle": "project-006",
+        "description": [
+          {
+            "id": 1,
+            "paragraph": "A NextJS application using MongoDB to store site-specific data. After choosing a category the application gives the user a random advice that can be upvoted."
+          },
+          {
+            "id": 2,
+            "paragraph": "The live code might need a minute or two to boot up as it is currently hosted on a free tier option @Heroku."
+          }
+        ],
+        "githubLink": "https://github.com/tmsnvk/project-006",
+        "demoLink": "https://savvyjar.herokuapp.com/?utm_source=portfolio",
+        "tags": [
+          { "id": 1, "name": "typescript" },
+          { "id": 2, "name": "reactjs" },
+          { "id": 3, "name": "nextjs" },
+          { "id": 4, "name": "mongodb" }
         ]
       }
     ]

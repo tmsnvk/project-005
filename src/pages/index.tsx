@@ -13,11 +13,11 @@ const Index = () => {
       <Seo title={"Portfolio Page"} />
       <Navigation />
       <Header />
-      <AnchorSpace id="about" rowstart={3} rowend={4} />
+      <AnchorSpace id={"about"} rowstart={3} rowend={4} />
       <About />
-      <AnchorSpace id="portfolio" rowstart={5} rowend={6} />
+      <AnchorSpace id={"portfolio"} rowstart={5} rowend={6} />
       <Portfolio />
-      <AnchorSpace id="contact" rowstart={8} rowend={9} />
+      <AnchorSpace id={"contact"} rowstart={8} rowend={9} />
       <Contact />
       <Footer />
     </MainLayout>

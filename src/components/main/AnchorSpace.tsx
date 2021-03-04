@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 type TStyled = {
-  rowstart: number;
-  rowend: number;
+  rowstart: number
+  rowend: number
 }
 
 const ComponentContainer = styled.div<TStyled>`
@@ -19,9 +19,9 @@ const ComponentContainer = styled.div<TStyled>`
 `;
 
 type TComponent = {
-  id: string;
-  rowstart: number;
-  rowend: number;
+  id: string
+  rowstart: number
+  rowend: number
 }
 
 const AnchorSpace = ({ id, rowstart, rowend }: TComponent)=> {
